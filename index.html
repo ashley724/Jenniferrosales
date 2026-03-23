@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ashley Jennifer | Data Science & Software Engineering Leader</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #FF6B9D;
+            --secondary: #C44569;
+            --accent: #FFA502;
+            --dark-bg: #0F0F1E;
+            --card-bg: #1A1A2E;
+            --text-light: #E8E8E8;
+            --text-dim: #A8A8B8;
+            --success: #00D4AA;
+            --hover-effect: rgba(255, 107, 157, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, var(--dark-bg) 0%, #16213E 100%);
+            color: var(--text-light);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* --- Navigation --- */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 8%;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            background: rgba(15, 15, 30, 0.85);
+            backdrop-filter: blur(15px);
+            z-index: 100;
+            border-bottom: 1px solid rgba(255, 107, 157, 0.2);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-weight: 800;
+            font-size: 1.6rem;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: -0.5px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 35px;
+        }
+
+        .nav-links a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        /* --- Hero Section --- */
+        .hero {
+            padding: 160px 8% 100px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 60px;
+            min-height: 100vh;
+        }
+
+        .hero-content {
+            flex: 1.2;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .hero-image {
+            flex: 0.8;
+            display: flex;
+            justify-content: center;
+            animation: fadeInRight 0.8s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translateX(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .img-container {
+            width: 340px;
+            height: 340px;
+            border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 50%, var(--accent) 100%);
+            overflow: hidden;
+            border: 4px solid var(--primary);
+            box-shadow: 0 0 60px rgba(255, 107, 157, 0.4), 0 0 120px rgba(196, 69, 105, 0.2);
+            animation: morph 8s ease-in-out infinite, float 3s ease-in-out infinite;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 120px;
+        }
+
+        .img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        @keyframes morph {
+            0% {
+                border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+            }
+            50% {
+                border-radius: 70% 30% 46% 54% / 30% 30% 70% 70%;
+            }
+            100% {
+                border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+            }
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.5rem, 6vw, 4.2rem);
+            line-height: 1.1;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, var(--text-light) 0%, var(--primary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero p {
+            color: var(--text-dim);
+            font-size: 1.15rem;
+            max-width: 600px;
+            margin-bottom: 40px;
+            line-height: 1.8;
+        }
+
+        .status-badge {
+            display: inline-block;
+            background: rgba(0, 212, 170, 0.15);
+            color: var(--success);
+            padding: 8px 16px;
+            border-radius: 25px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            border: 1px solid var(--success);
+        }
+
+        /* --- Buttons --- */
+        .cta-btn {
+            display: inline-block;
+            padding: 14px 32px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(255, 107, 157, 0.3);
+            border: none;
+            cursor: pointer;
+            margin-right: 15px;
+            margin-bottom: 10px;
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(255, 107, 157, 0.5);
+        }
+
+        .cta-btn-secondary {
+            background: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+
+        .cta-btn-secondary:hover {
+            background: var(--hover-effect);
+        }
+
+        /* --- Floating Email Button --- */
+        .email-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 30px rgba(255, 107, 157, 0.4);
+            z-index: 1000;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            font-size: 28px;
+        }
+
+        .email-float:hover {
+            transform: scale(1.15) rotate(10deg);
+            box-shadow: 0 15px 40px rgba(255, 107, 157, 0.6);
+        }
+
+        /* --- Sections --- */
+        section {
+            padding: 100px 8%;
+            position: relative;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            margin-bottom: 60px;
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            color: var(--text-light);
+        }
+
+        .section-title::before {
+            content: '';
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+            border-radius: 2px;
+        }
+
+        .section-title::after {
+            content: '';
+            height: 2px;
+            flex: 1;
+            background: rgba(255, 107, 157, 0.1);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: rgba(26, 26, 46, 0.6);
+            backdrop-filter: blur(10px);
+            padding: 40px;
+            border-radius: 15px;
+            transition: all 0.4s ease;
+            border: 1px solid rgba(255, 107, 157, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 107, 157, 0.1), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .card:hover::before {
+            left: 100%;
+        }
+
+        .card:hover {
+            border-color: var(--primary);
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(255, 107, 157, 0.2);
+        }
+
+        .card h3 {
+            color: var(--primary);
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .card .position {
+            color: var(--accent);
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .card ul {
+            list-style: none;
+            color: var(--text-dim);
+            font-size: 0.95rem;
+            line-height: 1.8;
+        }
+
+        .card ul li {
+            margin-bottom: 12px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .card ul li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-weight: bold;
+        }
+
+        /* --- Tech Tags --- */
+        .tag-cloud {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .tag {
+            background: rgba(255, 107, 157, 0.15);
+            color: var(--primary);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            border: 1px solid rgba(255, 107, 157, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .tag:hover {
+            background: rgba(255, 107, 157, 0.25);
+            border-color: var(--primary);
+            transform: translateY(-2px);
+        }
+
+        /* --- Alternate Section Background --- */
+        section:nth-child(even) {
+            background: rgba(255, 107, 157, 0.02);
+        }
+
+        /* --- Footer --- */
+        footer {
+            padding: 80px 8% 40px;
+            background: rgba(15, 15, 30, 0.9);
+            border-top: 1px solid rgba(255, 107, 157, 0.2);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 50px;
+            margin-bottom: 50px;
+            text-align: left;
+        }
+
+        .footer-brand h3 {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 15px;
+            font-size: 1.6rem;
+            font-weight: 800;
+        }
+
+        .footer-brand p {
+            color: var(--text-dim);
+            max-width: 400px;
+            font-size: 0.95rem;
+            line-height: 1.8;
+            font-style: italic;
+        }
+
+        .footer-links h4 {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            color: var(--text-light);
+            font-weight: 700;
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: var(--text-dim);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary);
+            padding-left: 5px;
+        }
+
+        .footer-bottom {
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 107, 157, 0.1);
+            text-align: center;
+            color: var(--text-dim);
+            font-size: 0.8rem;
+        }
+
+        .footer-bottom p {
+            margin-bottom: 5px;
+        }
+
+        /* --- Mobile Responsiveness --- */
+        @media (max-width: 968px) {
+            nav {
+                padding: 15px 5%;
+            }
+
+            .logo {
+                font-size: 1.3rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero {
+                flex-direction: column-reverse;
+                text-align: center;
+                padding-top: 100px;
+                gap: 40px;
+            }
+
+            .hero-content {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .img-container {
+                width: 280px;
+                height: 280px;
+            }
+
+            .cta-btn {
+                margin-right: 0;
+                display: block;
+                width: 100%;
+                text-align: center;
+                margin-bottom: 12px;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+                justify-content: center;
+            }
+
+            .section-title::before {
+                display: none;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 30px;
+            }
+
+            .footer-brand p {
+                margin: 0 auto;
+            }
+
+            .email-float {
+                width: 55px;
+                height: 55px;
+                font-size: 24px;
+                bottom: 20px;
+                right: 20px;
+            }
+
+            section {
+                padding: 60px 5%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .section-title {
+                font-size: 1.5rem;
+            }
+
+            .card {
+                padding: 25px;
+            }
+
+            .grid {
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <a href="mailto:ashleyjennifer724@gmail.com" class="email-float" title="Send me an email">✉</a>
+
+    <nav>
+        <div class="logo">ASHLEY.JENNIFER</div>
+        <div class="nav-links">
+            <a href="#summary">Summary</a>
+            <a href="#experience">Experience</a>
+            <a href="#skills">Skills</a>
+            <a href="#education">Education</a>
+            <a href="https://www.linkedin.com/in/rosales-jennifer" target="_blank">LinkedIn</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <div class="status-badge">✨ OPEN FOR GLOBAL OPPORTUNITIES</div>
+            <h1>Data Science & <span style="color: var(--primary);">Software Engineering Leader</span></h1>
+            <p>
+                A distinguished technologist with a PhD in Data Science and elite industry experience at global leaders like Google and Capgemini. I offer a rare synthesis of advanced academic research and practical application, spanning the entire data lifecycle from architecting complex software systems to engineering sophisticated AI models.
+            </p>
+            <div>
+                <a href="mailto:ashleyjennifer724@gmail.com" class="cta-btn">Get In Touch</a>
+                <a href="https://www.linkedin.com/in/rosales-jennifer" target="_blank" class="cta-btn cta-btn-secondary">View LinkedIn</a>
+            </div>
+        </div>
+
+        <div class="hero-image">
+            <div class="img-container">
+                👩‍💻
+            </div>
+        </div>
+    </header>
+
+    <section id="summary">
+        <h2 class="section-title">Executive Summary</h2>
+        <p style="color: var(--text-dim); line-height: 1.8; margin-bottom: 20px;">
+            A distinguished and forward-thinking technologist with a PhD in Data Science and a Master’s in Information Technology from the New York Institute of Technology. Ashley offers a rare synthesis of advanced academic research and elite industry experience at global leaders like Google and Capgemini. Her expertise spans the entire data lifecycle—from architecting complex software systems to engineering sophisticated AI models and delivering high-stakes technical consultations.
+        </p>
+        <p style="color: var(--text-dim); line-height: 1.8;">
+            Beyond her technical prowess, Ashley possesses a Diploma in Communication, enabling her to translate complex analytical findings into actionable business strategies and provide world-class customer representation. She specializes in developing original, multi-step problem-solving frameworks and high-level educational content that meets the most rigorous academic and professional standards.
+        </p>
+    </section>
+
+    <section id="experience">
+        <h2 class="section-title">Professional Experience</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Software Engineer</h3>
+                <span class="position">Capgemini | New York, NY</span>
+                <ul>
+                    <li>Architected and deployed high-performance software solutions for Fortune clients, consistently reducing system latency by optimizing code and scalable design.</li>
+                    <li>Led cross-functional teams in the end-to-end development of enterprise applications, utilizing React, Node.js, and Docker to deliver robust, cloud-ready products.</li>
+                    <li>Spearheaded the integration of AI-driven features into existing software suites, enhancing user engagement and automating complex data workflows.</li>
+                    <li>Mentored junior developers and maintained rigorous code quality through comprehensive peer reviews and automated testing protocols.</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>IT Consultant</h3>
+                <span class="position">New York Hospital | New York, NY</span>
+                <ul>
+                    <li>Orchestrated a seamless transition to hybrid IT operations, managing mission-critical infrastructure, secure networks, and cloud-based systems for high-availability medical services.</li>
+                    <li>Resolved high-priority technical escalations, ensuring zero downtime for essential hospital operations and improving system reliability.</li>
+                    <li>Designed and executed comprehensive staff training programs on cybersecurity and new healthcare software, significantly reducing internal security risks.</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>IT Consultant</h3>
+                <span class="position">Google NYC | New York, NY</span>
+                <ul>
+                    <li>Provided high-level strategic consulting for complex Google infrastructure projects, ensuring optimal performance across distributed systems.</li>
+                    <li>Collaborated with world-class engineering teams to identify and resolve systemic bottlenecks in internal toolsets, enhancing global developer productivity.</li>
+                    <li>Developed custom automation scripts and diagnostic tools that streamlined IT operations and reduced manual troubleshooting time.</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>Data Analyst</h3>
+                <span class="position">New York Institute of Technology | Remote</span>
+                <ul>
+                    <li>Conducted advanced statistical analysis on large-scale datasets during PhD research, producing high-impact visualizations and reports for academic publication.</li>
+                    <li>Developed predictive models that identified key trends in institutional data, directly informing strategic planning and research initiatives.</li>
+                    <li>Mastered the art of clear, data-driven storytelling, presenting complex findings to diverse academic and administrative stakeholders.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2 class="section-title">Technical Skills</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Programming</h3>
+                <div class="tag-cloud">
+                    <span class="tag">Python (Scikit-learn, TensorFlow, PyTorch, Pandas)</span>
+                    <span class="tag">R</span>
+                    <span class="tag">SQL</span>
+                    <span class="tag">Java</span>
+                    <span class="tag">C++</span>
+                    <span class="tag">Bash/Shell</span>
+                </div>
+            </div>
+            <div class="card">
+                <h3>Data & AI</h3>
+                <div class="tag-cloud">
+                    <span class="tag">Deep Learning (Transformers, CNNs)</span>
+                    <span class="tag">NLP</span>
+                    <span class="tag">Computer Vision</span>
+                    <span class="tag">A/B Testing</span>
+                    <span class="tag">Generative AI</span>
+                    <span class="tag">MLOps</span>
+                    <span class="tag">Tableau</span>
+                    <span class="tag">Power BI</span>
+                    <span class="tag">D3.js</span>
+                </div>
+            </div>
+            <div class="card">
+                <h3>Infrastructure & Cloud</h3>
+                <div class="tag-cloud">
+                    <span class="tag">AWS (SageMaker, Lambda, EC2)</span>
+                    <span class="tag">GCP (BigQuery, AI Platform)</span>
+                    <span class="tag">Azure</span>
+                    <span class="tag">Kubernetes</span>
+                    <span class="tag">Docker</span>
+                </div>
+            </div>
+            <div class="card">
+                <h3>Databases</h3>
+                <div class="tag-cloud">
+                    <span class="tag">PostgreSQL</span>
+                    <span class="tag">MongoDB</span>
+                    <span class="tag">Cassandra</span>
+                    <span class="tag">Redis</span>
+                    <span class="tag">Neo4j</span>
+                    <span class="tag">Snowflake</span>
+                    <span class="tag">Databricks</span>
+                </div>
+            </div>
+            <div class="card">
+                <h3>Web & IT</h3>
+                <div class="tag-cloud">
+                    <span class="tag">HTML5/CSS3</span>
+                    <span class="tag">JavaScript (ES6+)</span>
+                    <span class="tag">React</span>
+                    <span class="tag">Node.js</span>
+                    <span class="tag">RESTful APIs</span>
+                    <span class="tag">Linux (Ubuntu/CentOS)</span>
+                    <span class="tag">Windows Server</span>
+                </div>
+            </div>
+            <div class="card">
+                <h3>Soft Skills</h3>
+                <div class="tag-cloud">
+                    <span class="tag">Strategic Problem Solving</span>
+                    <span class="tag">Elite Communication</span>
+                    <span class="tag">Adaptability</span>
+                    <span class="tag">Technical Writing</span>
+                    <span class="tag">Stakeholder Management</span>
+                    <span class="tag">Customer Success</span>
+                    <span class="tag">Educational Content Design</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="education">
+        <h2 class="section-title">Education</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>PhD in Data Science</h3>
+                <span class="position">New York Institute of Technology | New York, NY</span>
+            </div>
+            <div class="card">
+                <h3>Master of Science in Information Technology</h3>
+                <span class="position">New York Institute of Technology | New York, NY</span>
+            </div>
+            <div class="card">
+                <h3>Diploma in Communication</h3>
+                <span class="position">[Relevant Institution] | New York, NY</span>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <h3>ASHLEY JENNIFER</h3>
+                <p>"I believe in the power of data and technology to drive innovation and solve complex challenges. My mission is to build intelligent systems and translate intricate technical insights into impactful business solutions."</p>
+            </div>
+            <div class="footer-links">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="#summary">Summary</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#education">Education</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Contact</h4>
+                <ul>
+                    <li><a href="mailto:ashleyjennifer724@gmail.com">ashleyjennifer724@gmail.com</a></li>
+                    <li><a href="https://www.linkedin.com/in/rosales-jennifer" target="_blank" style="color: var(--primary); font-weight: 700;">LinkedIn Profile</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div style="margin-bottom: 40px; text-align: center;">
+            <a href="https://www.linkedin.com/in/rosales-jennifer" target="_blank" class="cta-btn">Connect on LinkedIn</a>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Ashley Jennifer | Data Science & Software Engineering Leader</p>
+            <p style="margin-top: 5px;">Crafted for Innovation & Impact</p>
+        </div>
+    </footer>
+
+</body>
+</html>
