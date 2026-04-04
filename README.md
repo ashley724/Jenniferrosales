@@ -71,7 +71,7 @@ Simply open `rosales_amber_portfolio.html` in your browser. No build process req
 ### Update Contact Information
 Find and replace the following in `rosales_amber_portfolio.html`:
 - Email: `spenceamber724@gmail.com`
-- LinkedIn: `https://www.linkedin.com/in/rosales-amber` (Update this to Spence's actual LinkedIn)
+- LinkedIn: `https://www.linkedin.com/in/ashley-jennifer-8b5b003b6/` (Update this to Spence's actual LinkedIn)
 
 ### Modify Content Sections
 1. **Hero Section**: Update the headline, tagline, and status badge
