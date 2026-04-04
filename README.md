@@ -1,6 +1,6 @@
-# Ashley Jennifer - Professional Portfolio
+# Spence Amber - Professional Portfolio
 
-A modern, beautiful, and responsive portfolio website for **Ashley Jennifer**, a Data Science & Software Engineering Leader.
+A modern, beautiful, and responsive portfolio website for **Spence Amber**, a Data Science & Software Engineering Leader.
 
 ## 🌟 Features
 
@@ -14,15 +14,15 @@ A modern, beautiful, and responsive portfolio website for **Ashley Jennifer**, a
 ## 📁 Project Structure
 
 ```
-ashley-jennifer-portfolio/
-├── rosales_jennifer_portfolio.html    # Main standalone HTML portfolio
-├── rosales_jennifer_index.html        # React project entry point
-├── rosales_jennifer_package.json      # Project dependencies
-├── rosales_jennifer_tsconfig.json     # TypeScript configuration
-├── rosales_jennifer_vite.config.ts    # Vite build configuration
-├── rosales_jennifer_vercel.json       # Vercel deployment config
-├── rosales_jennifer_README.md         # This file
-└── rosales_jennifer_portfolio_content.md  # Content outline
+spence-amber-portfolio/
+├── rosales_amber_portfolio.html    # Main standalone HTML portfolio
+├── rosales_amber_index.html        # React project entry point
+├── rosales_amber_package.json      # Project dependencies
+├── rosales_amber_tsconfig.json     # TypeScript configuration
+├── rosales_amber_vite.config.ts    # Vite build configuration
+├── rosales_amber_vercel.json       # Vercel deployment config
+├── rosales_amber_README.md         # This file
+└── rosales_amber_portfolio_content.md  # Content outline
 ```
 
 ## 🎨 Design Highlights
@@ -48,7 +48,7 @@ ashley-jennifer-portfolio/
 ## 🚀 Getting Started
 
 ### Option 1: Use Standalone HTML
-Simply open `rosales_jennifer_portfolio.html` in your browser. No build process required!
+Simply open `rosales_amber_portfolio.html` in your browser. No build process required!
 
 ### Option 2: React + Vite Setup
 1. Install dependencies:
@@ -69,9 +69,9 @@ Simply open `rosales_jennifer_portfolio.html` in your browser. No build process 
 ## 📝 Customization Guide
 
 ### Update Contact Information
-Find and replace the following in `rosales_jennifer_portfolio.html`:
-- Email: `ashleyjennifer724@gmail.com`
-- LinkedIn: `https://www.linkedin.com/in/rosales-jennifer` (Update this to Ashley's actual LinkedIn)
+Find and replace the following in `rosales_amber_portfolio.html`:
+- Email: `spenceamber724@gmail.com`
+- LinkedIn: `https://www.linkedin.com/in/rosales-amber` (Update this to Spence's actual LinkedIn)
 
 ### Modify Content Sections
 1. **Hero Section**: Update the headline, tagline, and status badge
@@ -95,7 +95,7 @@ Update the CSS variables in the `:root` selector:
 ### Add Profile Image
 Replace the emoji placeholder (👩‍💻) in the `.img-container` div with an image tag:
 ```html
-<img src="path/to/image.jpg" alt="Ashley Jennifer">
+<img src="path/to/image.jpg" alt="Spence Amber">
 ```
 
 ## 🌐 Deployment
@@ -136,7 +136,7 @@ MIT License - Feel free to use and modify as needed.
 5. **Optimize images**: Use compressed images for faster loading
 
 ## 📞 Support
-For questions or customization help, refer to the inline comments in the HTML file or consult the content outline in `rosales_jennifer_portfolio_content.md`.
+For questions or customization help, refer to the inline comments in the HTML file or consult the content outline in `rosales_amber_portfolio_content.md`.
 
 ---
 

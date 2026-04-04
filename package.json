@@ -1,9 +1,9 @@
 {
-  "name": "rosales-jennifer-portfolio",
+  "name": "rosales-amber-portfolio",
   "version": "1.0.0",
   "type": "module",
   "license": "MIT",
-  "description": "Professional portfolio for Rosales Jennifer - Digital Marketing & Brand Strategist",
+  "description": "Professional portfolio for Rosales Amber - Digital Marketing & Brand Strategist",
   "scripts": {
     "dev": "vite --host",
     "build": "vite build",

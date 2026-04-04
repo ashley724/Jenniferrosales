@@ -1,9 +1,9 @@
-# Ashley Jennifer | Data Science & Software Engineering Leader
+# Spence Amber | Data Science & Software Engineering Leader
 
 ## Executive Summary
-A distinguished and forward-thinking technologist with a PhD in Data Science and a Master’s in Information Technology from the New York Institute of Technology. Ashley offers a rare synthesis of advanced academic research and elite industry experience at global leaders like Google and Capgemini. Her expertise spans the entire data lifecycle—from architecting complex software systems to engineering sophisticated AI models and delivering high-stakes technical consultations.
+A distinguished and forward-thinking technologist with a PhD in Data Science and a Master’s in Information Technology from the New York Institute of Technology. Spence offers a rare synthesis of advanced academic research and elite industry experience at global leaders like Google and Capgemini. Her expertise spans the entire data lifecycle—from architecting complex software systems to engineering sophisticated AI models and delivering high-stakes technical consultations.
 
-Beyond her technical prowess, Ashley possesses a Diploma in Communication, enabling her to translate complex analytical findings into actionable business strategies and provide world-class customer representation. She specializes in developing original, multi-step problem-solving frameworks and high-level educational content that meets the most rigorous academic and professional standards.
+Beyond her technical prowess, Spence possesses a Diploma in Communication, enabling her to translate complex analytical findings into actionable business strategies and provide world-class customer representation. She specializes in developing original, multi-step problem-solving frameworks and high-level educational content that meets the most rigorous academic and professional standards.
 
 ## Professional Experience
 
@@ -89,5 +89,5 @@ Beyond her technical prowess, Ashley possesses a Diploma in Communication, enabl
 *   **Adaptability**: Proven track record of excelling in onsite, hybrid, and fully remote environments across different industries.
 
 ## Contact
-*   **Email:** ashleyjennifer724@gmail.com
+*   **Email:** spenceamber724@gmail.com
 *   **LinkedIn:** [LinkedIn Profile URL Placeholder]
